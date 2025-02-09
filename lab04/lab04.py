@@ -20,8 +20,17 @@ def run_console_chat(sign, **kwargs):
                 print('Ending match:', ending_match)
             break
 
-lab04_params = {}
+lab04_params = {
+    'template_file': r'C:\Users\labadmin\Desktop\spring2025-labs\lab04\lab04_trader_chat.json',
+    'sign': 'Cooper',
+    'end_regex': r'End of trade'  # Adjust according to your template's end condition
+}
 
-if __name__ ==  '__main__':
-    # run lab04.py to test your template interactively
-    pass
+
+
+if __name__ == '__main__':
+    sign = lab04_params['sign']
+    template_file = lab04_params['template_file']
+    end_regex = lab04_params['end_regex']
+    
+    run_console_chat(sign=sign, template_file=template_file, end_regex=end_regex)
